@@ -131,6 +131,7 @@ GROUP BY
 	  gender
 
 --ANS-7-(SOLVE THIS)
+	rank and over are windows function(nested select) statements means what all comes under select statement)
 SELECT 
 EXTRACT (YEAR FROM sale_date) as year,
 EXTRACT(MONTH FROM sale_date) as month,
@@ -144,7 +145,7 @@ SELECT
       customer_id,
       SUM(total_sale) as total_sales
 FROM retail_sales
-GROUP BY 1
+GROUP BY 1   (1,2 we should use column names for better understanding and readability )
 ORDER BY 2 DESC
 LIMIT 5
 
@@ -165,4 +166,5 @@ ELSE 'Evening'
 END as shift
 FROM retail_sales
 
+with(common table expression-helps enhance query)(LEARN FOR INTERVIEW ALSO)
 ---END OF PROJECT---
